@@ -14,7 +14,7 @@ export default function Modules() {
         setModuleName={setModuleName}
         moduleName={moduleName}
         addModule={() => {}}
-      />{" "}
+      />
       <br />
       <br />
       <br />
