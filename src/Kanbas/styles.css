@@ -11,3 +11,7 @@ body * {
     padding-left: 140px !important;
   }
 }
+
+.bg-secondary {
+  background-color: #b0b0b0 !important;
+}
