@@ -1,15 +1,6 @@
-import ModuleEditor from "./ModuleEditor";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
-export default function ModulesControls({
-  moduleName,
-  setModuleName,
-  addModule,
-}: {
-  moduleName: string;
-  setModuleName: (title: string) => void;
-  addModule: () => void;
-}) {
+export default function ModulesControls() {
   return (
     <div id="wd-modules-controls" className="text-nowrap">
       <button
@@ -59,12 +50,6 @@ export default function ModulesControls({
       </div>
       {/* Implement the View Progress and Collapse All buttons
           with IDs wd-view-progress and wd-collapse-all */}
-      <ModuleEditor
-        dialogTitle="Add Module"
-        moduleName={moduleName}
-        setModuleName={setModuleName}
-        addModule={addModule}
-      />
     </div>
   );
 }

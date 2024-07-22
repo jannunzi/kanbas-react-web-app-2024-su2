@@ -1,20 +1,14 @@
 import { useParams } from "react-router";
 import * as db from "../../Database";
 import ModulesControls from "./ModulesControls";
-import { useState } from "react";
 import ModuleControlButtons from "./ModuleControlButtons";
 
 export default function Modules() {
   const { cid } = useParams();
-  const { modules } = db;
-  const [moduleName, setModuleName] = useState("");
+  const modules = db.modules;
   return (
     <div id="wd-modules">
-      <ModulesControls
-        setModuleName={setModuleName}
-        moduleName={moduleName}
-        addModule={() => {}}
-      />
+      <ModulesControls />
       <br />
       <br />
       <br />
@@ -25,22 +19,8 @@ export default function Modules() {
           .map((module: any) => (
             <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
               <div className="wd-title p-3 ps-4 bg-secondary text-black">
-                {!module.editing ? (
-                  module.name
-                ) : (
-                  <input
-                    className="form-control w-50 d-inline-block"
-                    onChange={(e) => {}}
-                    onKeyDown={(e) => {}}
-                    value={module.name}
-                  />
-                )}
-
-                <ModuleControlButtons
-                  moduleId={module._id}
-                  deleteModule={(moduleId) => {}}
-                  editModule={(moduleId) => {}}
-                />
+                {module.name}
+                <ModuleControlButtons />
               </div>
               {module.lessons && (
                 <ul className="wd-lessons list-group rounded-0">

@@ -1,19 +1,8 @@
 import { Link } from "react-router-dom";
-export default function Dashboard({
-  courses,
-  course,
-  setCourse,
-  addNewCourse,
-  deleteCourse,
-  updateCourse,
-}: {
-  courses: any[];
-  course: any;
-  setCourse: (course: any) => void;
-  addNewCourse: () => void;
-  deleteCourse: (courseId: string) => void;
-  updateCourse: () => void;
-}) {
+import * as db from "../Database";
+
+export default function Dashboard() {
+  const courses = db.courses;
   return (
     <div>
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
