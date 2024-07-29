@@ -1,7 +1,13 @@
+import React from "react";
+import { useSelector } from "react-redux";
+
 export default function BootstrapNavigation() {
+  const { count } = useSelector((state: any) => state.counterReducer);
+
   return (
     <div id="wd-css-navigating-with-tabs">
-      <h2>Tabs</h2>
+      <h2>Tabs 1111</h2>
+      <h3>Count: {count}</h3>
       <ul className="nav nav-tabs">
         <li className="nav-item">
           <a className="nav-link active" href="#">
