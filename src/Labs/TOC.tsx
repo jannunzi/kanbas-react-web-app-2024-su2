@@ -4,11 +4,6 @@ export default function TOC() {
   return (
     <ul className="nav nav-pills">
       <li className="nav-item">
-        <a id="wd-a" href="#/Labs" className="nav-link">
-          Labs
-        </a>
-      </li>
-      <li className="nav-item">
         <a
           id="wd-a1"
           href="#/Labs/Lab1"

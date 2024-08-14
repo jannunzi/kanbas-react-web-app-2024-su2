@@ -12,9 +12,13 @@ export default function CoursesNavigation() {
     "Assignments",
     "Quizzes",
     "Grades",
+    "People",
   ];
   return (
-    <div id="wd-courses-navigation" className="list-group  rounded-0">
+    <div
+      id="wd-courses-navigation"
+      className="list-group rounded-0 .wd-navigation"
+    >
       {links.map((link) => (
         <a
           id={`wd-course-${link.toLowerCase()}-link`}
